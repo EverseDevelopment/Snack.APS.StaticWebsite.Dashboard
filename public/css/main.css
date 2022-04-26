@@ -1,0 +1,271 @@
+﻿html,body{
+  /* height: 100vh;
+  min-height: 100vh; */
+  overflow:visible;
+  /* width: 100%; */
+  margin:0;
+  overflow: hidden;
+  min-height: 100%;
+  height: 100%;
+}
+
+  :root {
+    --border-size: 0rem;
+    --duration: 250ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --font-family: tahoma;
+    --color-primary: white;
+    --color-secondary: #2d2d2d;
+    --color-tertiary: dodgerblue;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 1rem;
+  }
+
+#main-container{
+  /* height: 100vh;
+  min-height: 100vh; */
+  height: 100%;
+  width: 100%;
+  margin: 0!important;
+}
+#company-image {
+  right: 15px;
+  position: absolute;
+  bottom: 15px;
+  z-index: 2;
+  width: 150px;
+  user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;      
+}
+
+@media only screen and (max-width:800px) {
+  #company-image {
+    width: 100px;
+    right: 10px;
+  }
+}
+
+
+.viewerContainer, .dashboardContainer{
+  height: 100%;
+  width: 100%;
+}
+
+.fill{
+  height: 100%;
+  width: 100%;
+  padding: 0!important;
+  /* position: static !important; */
+  /* margin-right: 24px; */
+}
+
+.fillColDashboard{
+  height: 100vh;
+  /* margin-right: 24px; */
+}
+
+
+
+.viewerContainer{
+  width: 100%;
+  height: 100%;
+}
+
+#maindashcontainer{
+  padding-top: 5vh;
+  width: 50%;
+}
+
+
+#model-name {
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+  right: 200px;
+  position: absolute;
+  bottom: 7px;
+  z-index: 2;
+  width: 800px;
+  user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;    
+}
+
+@media only screen and (max-width:800px) {
+  #model-name {
+    right: 140px;
+    font-size: 10px;
+  }
+}
+
+
+/* Dasboard *************** */
+
+.rowfill{
+  height: 60%;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  /* width: 100%; */
+  /* background: red;
+  border:1px solid black;   */
+}
+
+
+.rowfillDatatable{
+  height: 32vh;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  /* width: 100%; */
+  /* background: red;
+  border:1px solid black;   */
+}
+
+.rowfillDatatable div{
+  margin: 0 auto;
+  width: 100%!important;
+}
+
+
+.collfill{
+  height: 100%;
+  width: 50%;
+  /* border:1px solid black;   */
+  padding-top:5%;
+  padding-bottom:5%;
+}
+
+.canvasfill{
+  
+}
+
+
+/* @media only screen and (max-width:1600px) {
+  .canvasfill{
+    height: 100%!important; 
+    padding-right: 6vw;
+    padding-left: 6vw;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .canvasfill{
+    height: 100%!important; 
+    padding-right: 2vw;
+    padding-left: 2vw;
+  }
+}
+
+@media only screen and (max-width:1074px) {
+  .canvasfill{
+    height: 100%!important; 
+    padding-right: 0vw;
+    padding-left: 0vw;
+  }
+} */
+
+@media only screen and (max-width:1600px) {
+  .collfill{
+    height: 50%;
+    width: 100%;
+    margin-top:0%;
+    padding-top:5%;
+  }
+}
+
+
+
+
+/* Dashboard button section *************** */
+
+* {
+  box-sizing: border-box;
+}
+
+.containerbuttons{
+  position: relative;
+  width: 100%;
+  height: 10%;
+  margin: 0!important;
+  padding-bottom: 2vh;
+}
+
+.multi-button {
+  display: flex;
+  position: absolute;
+  left: 12.5%;
+  right: 12.5%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  /* margin-top: 5vh; */
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  transition: flex-grow var(--duration) var(--ease);
+  border-radius: 15px;
+}
+
+@media only screen and (max-width:1200px) {
+  .multi-button button{
+    font-size: 1.0rem;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .multi-button button{
+    font-size: 0.6rem;
+    padding:
+    calc(var(--space) / 5.525)
+    var(10px)
+    var(10px);
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .multi-button button{
+    font-size: 0.4rem;
+  }
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  outline: none;
+  text-shadow: none;
+}
+
+.multi-button button:focus,
+.multi-button button:active {
+  outline: var(--border-size);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+
+/* .multi-button button:active {
+  transform: translateY(var(--border-size));
+} */
+

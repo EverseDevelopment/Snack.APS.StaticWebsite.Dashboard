@@ -1,0 +1,152 @@
+/* CSS Document */
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+/*@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+/*@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+/* ---------- FONTAWESOME ---------- */
+/* [class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+} */
+
+/* ---------- GENERAL ---------- */
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+*:before, *:after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #cde6ff;
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 0;
+  -webkit-appearance: none;
+  
+}
+
+p {
+  line-height: 1.5em;
+}
+
+
+
+.container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* ---------- LOGIN ---------- */
+#login {
+  width: 280px;
+  margin: 0 auto;
+}
+
+#login form span {
+  background-color: #494a4d;
+  border-radius: 3px 0px 0px 3px;
+  color: #ffffff;
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+#login form input {
+  height: 50px;
+}
+
+#login form input[type="text"], input[type="password"] {
+  background-color: #e4e4e4;
+  border-radius: 0px 3px 3px 0px;
+  color: #585858;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 230px;
+}
+
+#login form input[type="submit"] {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #2b455f;;
+  color: #eee;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  width: 100%;
+  
+}
+
+#buttonsubmit{
+  width: 100%;
+}
+
+#login form input[type="submit"]:hover {
+  background-color: #3e6d9d;
+}
+
+
+#login > p {
+  text-align: center;
+}
+
+#login > p span {
+  padding-left: 5px;
+}
+
+#login-error-msg {
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff0000;
+  opacity: 0;
+
+}
+
+#logoContainer{
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+#logincard{
+  box-shadow: 3px 3px 8px #c5c5c59d;
+  border-radius: 5px;
+  width: 350px;
+}
+
+@media only screen and (max-width:450px) {
+  #logincard {
+    box-shadow: 0px 0px 0px #c5c5c59d;
+  }
+}

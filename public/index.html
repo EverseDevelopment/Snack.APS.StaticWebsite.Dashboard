@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>E-verse</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="shortcut icon" href="images/Background.ico">
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- DataTables-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"  type="text/css"/>
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+ 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+
+  <!-- Autodesk Forge Viewer files -->
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"></script>
+
+  <!-- this project files -->
+  <link href="css/main.css" rel="stylesheet" />
+  <!-- <script src="js/ForgeTree.js"></script> -->
+  <script src='js/Variables/Variables.js'></script>
+  <script src='js/Charts/ModelData.js'></script>
+  <script src="js/ForgeViewer.js"></script>
+  <script src='js/PowerBI.js'></script>
+  <script src='js/Charts/Auxiliary.js'></script>
+  <script src='js/extension.js'></script>
+  <script src='js/Isolate.js'></script>
+  <script src='js/Charts/BarChart.js'></script>
+  <script src='js/Charts/BarChartGrouped.js'></script>
+  <script src='js/Charts/BarChartInstallation.js'></script>
+  <script src='js/Charts/LineChart.js'></script>
+  <script src='js/Charts/DoughnutChart.js'></script>
+  <script src='js/Charts/DashboardSpace.js'></script>
+  
+</head>
+
+<body>
+  <div class="row" id="main-container"> 
+
+      <div class="col fill">
+        <div  class="viewerContainer">
+          <div id="forgeViewer"></div>
+        </div>
+        <!-- <a href="https://e-verse.com/" target="blank">
+          <img id="company-image" src="images/EverseLogo.png"/>
+       </a> -->
+       <p id="model-name"></p>
+      </div>
+  </div>
+</body>
+</html>
