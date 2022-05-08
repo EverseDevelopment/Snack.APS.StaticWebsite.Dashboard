@@ -4,7 +4,8 @@
 <br/>
 
 ## Getting Started
-You can find details on how to get started [Here](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/Getting-Started).
+This is a plain javascript static app so there is no need to compile. Access the app on the index.html
+Be aware that for security purposes there is a file missing in public>>js>>variables>>Variables.js, that file is supposed to contain a URN, a URL to securely obtain a forge token and an apikey to access the URL.
 
 ## Contributors
 This repo is primarily managed by [E-verse](https://www.e-verse.co/) and by [People Like You™](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/pulse).
