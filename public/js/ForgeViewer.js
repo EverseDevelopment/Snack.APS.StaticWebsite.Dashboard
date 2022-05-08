@@ -118,9 +118,3 @@ DashBoardColors = generateColorsRandom();
     return { background: background };
   }
 }
-
-
-
-
-
-

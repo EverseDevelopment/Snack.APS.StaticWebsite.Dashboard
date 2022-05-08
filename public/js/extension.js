@@ -1,10 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-undef */
-/* eslint-disable linebreak-style */
-///////////////////////////////////////////////////////////////////////////////
-// ToolBar
-//
-///////////////////////////////////////////////////////////////////////////////
 AutodeskNamespace('Autodesk.Research.TtIf.Extension');
  
 ToolBar = function (viewer, options) {

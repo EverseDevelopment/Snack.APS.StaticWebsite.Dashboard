@@ -17,10 +17,7 @@ function showPowerBIReport(){
     }
     else{
         alert("Data not loaded yet");
-    }
-
-
-    
+    } 
 }
 
 
