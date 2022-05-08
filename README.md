@@ -5,6 +5,7 @@
 
 ## Getting Started
 This is a plain javascript static app so there is no need to compile. Access the app on the index.html
+
 Be aware that for security purposes there is a file missing in public>>js>>variables>>Variables.js, that file is supposed to contain a URN, a URL to securely obtain a forge token and an apikey to access the URL.
 
 ## Contributors
