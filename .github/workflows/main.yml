@@ -20,8 +20,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:        
-          aws-access-key-id: ${{ EVERSE_AWS_S3_BUCKET_SECRET_KEY_ID }}
-          aws-secret-access-key: ${{ EVERSE_AWS_S3_BUCKET_SECRET_KEY_SECRET }}
+          aws-access-key-id: ${{ secrets.EVERSE_AWS_S3_BUCKET_SECRET_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.EVERSE_AWS_S3_BUCKET_SECRET_KEY_SECRET }}
           aws-region: us-east-2
       - name: Deploy
         run: aws s3 sync ./public s3://everse-snack-forge.dashboard
