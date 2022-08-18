@@ -48,6 +48,11 @@ body {
   right: 0;
 }
 
+.adsk-viewing-viewer #modelTools,
+.adsk-viewing-viewer #navTools {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
   #company-image {
     width: 100px;
