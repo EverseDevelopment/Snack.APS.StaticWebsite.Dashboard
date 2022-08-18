@@ -53,6 +53,41 @@ body {
   display: none;
 }
 
+.info-wrapper {
+  position: absolute;
+  z-index: 99;
+  top: 1rem;
+  left: 1rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.info-wrapper img {
+  width: 2rem;
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-title {
+  color: #E62442;
+  margin-bottom: 1rem;
+}
+
+.info-description h3 {
+  font-weight: 700;
+}
+
+.info-description p {
+  font-size: 13px;
+  color: grey;
+}
+
 @media only screen and (max-width: 800px) {
   #company-image {
     width: 100px;
