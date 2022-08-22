@@ -1,62 +1,122 @@
 ﻿<!DOCTYPE html>
 <html>
+  <head>
+    <title>e-verse</title>
+    <meta charset="utf-8" />
 
-<head>
-  <title>e-verse</title>
-  <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  
-  <link rel="shortcut icon" href="images/Background.ico">
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="images/Background.ico" />
 
-  <!-- DataTables-->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"  type="text/css"/>
-  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"
+      type="text/css"
+    />
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-  <!-- Autodesk Forge Viewer files -->
-  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
-  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    <!-- Autodesk Forge Viewer files -->
+    <link
+      rel="stylesheet"
+      href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+      type="text/css"
+    />
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
 
-  <script src=" https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"></script>
 
-  <!-- this project files -->
-  <link href="css/main.css" rel="stylesheet" />
-  <!-- <script src="js/ForgeTree.js"></script> -->
-  <script src='js/Variables/Variables.js'></script>
-  <script src='js/Charts/ModelData.js'></script>
-  <script src="js/ForgeViewer.js"></script>
-  <script src='js/PowerBI.js'></script>
-  <script src='js/Charts/Auxiliary.js'></script>
-  <script src='js/extension.js'></script>
-  <script src='js/Isolate.js'></script>
-  <script src='js/Charts/BarChart.js'></script>
-  <script src='js/Charts/BarChartGrouped.js'></script>
-  <script src='js/Charts/BarChartInstallation.js'></script>
-  <script src='js/Charts/LineChart.js'></script>
-  <script src='js/Charts/DoughnutChart.js'></script>
-  <script src='js/Charts/DashboardSpace.js'></script>
-  
-</head>
+    <!-- this project files -->
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/ForgeTree.js"></script>
+    <script src="js/Variables/Variables.js"></script>
+    <script src="js/Charts/ModelData.js"></script>
+    <script src="js/ForgeViewer.js"></script>
+    <script src="js/PowerBI.js"></script>
+    <script src="js/Charts/Auxiliary.js"></script>
+    <script src="js/extension.js"></script>
+    <script src="js/Isolate.js"></script>
+    <script src="js/Charts/BarChart.js"></script>
+    <script src="js/Charts/BarChartGrouped.js"></script>
+    <script src="js/Charts/BarChartInstallation.js"></script>
+    <script src="js/Charts/LineChart.js"></script>
+    <script src="js/Charts/DoughnutChart.js"></script>
+    <script src="js/Charts/DashboardSpace.js"></script>
+  </head>
 
-<body>
-  <div class="row" id="main-container"> 
-
+  <body>
+    <div class="row" id="main-container">
       <div class="col fill">
-        <div  class="viewerContainer">
+        <div class="viewerContainer">
           <div id="forgeViewer"></div>
         </div>
-       <p id="model-name"></p>
+        <div class="info-wrapper" data-target="#info-modal" data-toggle="modal">
+          <img src="images/infoIcon.png" id="info-logo" alt="logo" />
+        </div>
+        <img src="images/EverseLogo.png" id="bottom-logo" alt="logo" />
+        <p id="model-name"></p>
       </div>
-  </div>
-</body>
+    </div>
+    <!-- Start Modal -->
+    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h1 class="modal-title">DATA MODEL</h1>
+            <div class="info-description">
+              <h3>
+                DESCRIPTION
+              </h3>
+              <p>
+                This is a 3D viewer connected directly with an Autodesk BIM360 model and implemented a Charts to obtain information of the models like categories, Material, Status, etc. By clicking the charts the user can be reflected by isolation and coloring the elements in the model.
+              </p>
+            </div>
+            <div class="info-description">
+              <h3>
+                TECHNOLOGY STACK
+              </h3>
+              <p>React</p>
+              <p>Three.js</p>
+              <p>C#</p>
+            </div>
+            <div class="info-description">
+              <h3>
+                SERVICES
+              </h3>
+              <p>Data Automation</p>
+              <p>Process Automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+  </body>
 </html>
