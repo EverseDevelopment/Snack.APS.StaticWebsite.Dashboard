@@ -45,7 +45,7 @@ function launchViewer(urn) {
 
   function onDocumentLoadSuccess(doc) {
     var viewables = doc.getRoot().getDefaultGeometry(true);
-    viewer.loadDocumentNode(doc, viewables, { skipHiddenFragments: false, ).then((i) => {});
+    viewer.loadDocumentNode(doc, viewables, { skipHiddenFragments: false} ).then((i) => {});
 
     viewer.setDisplayEdges(false);
     viewer.setProgressiveRendering(true);
