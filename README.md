@@ -15,7 +15,7 @@ Image preview
 You can see a live demo of this repo <a href="https://forgedashboard.e-verse.com/" target="_blank">Here</a>
 
 ## Contributors
-This repo is primarily managed by [E-verse](https://www.e-verse.co/) and by [People Like You™](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/pulse).
+This repo is primarily managed by [E-verse](https://www.e-verse.com/) and by [People Like You™](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/pulse).
 
 ## Help improve this repo
 If you're interested in contributing to this repo, just submit a [pull request](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/pulls) or a [feature request](https://github.com/EverseDevelopment/Forge.StaticWebsite.Dashboard/issues) .
