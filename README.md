@@ -9,6 +9,9 @@ This is a plain javascript static app so there is no need to compile. Access the
 Be aware that for security purposes there is a file missing in public>>js>>variables>>Variables.js, that file is supposed to contain a URN, a URL to securely obtain a forge token and an apikey to access the URL.
   
 ## Demo
+Image preview
+![image](https://user-images.githubusercontent.com/67430601/216076785-75f815b8-0288-4e95-9c57-0cbadafb5aaf.png)
+
 You can see a live demo of this repo <a href="https://forgedashboard.e-verse.com/" target="_blank">Here</a>
 
 ## Contributors
