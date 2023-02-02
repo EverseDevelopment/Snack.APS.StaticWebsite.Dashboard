@@ -9,6 +9,7 @@ function showPowerBIReport(){
         else{
             addElement();
             viewer.resize();
+            switchButton("button01");
             Quantities(modData); 
             modData.design = DesignData(modData.Elements);
             modData.manufacture = ManufactureData(modData.Elements);
