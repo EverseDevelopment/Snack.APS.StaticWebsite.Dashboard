@@ -117,9 +117,8 @@ async function arraySimplify(obj, _callback){
       viewer.getProperties(item, function(dbs){          
         properties.forEach(property => {
           var p = dbs.properties.filter(prop => property.includes(prop.displayName))[0];
-          console.warn('log test')
           if (p !== undefined) {
-            console.log({p})
+            console.log({design, p})
             for(var i=0; i<design.xReferenceVal.length; i++){
               design.data[p.displayName][i]++;
               design.elements[p.displayName][design.xReference[i]].push(item);
