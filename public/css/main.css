@@ -298,3 +298,18 @@ body {
 /* .multi-button button:active {
   transform: translateY(var(--border-size));
 } */
+
+.docking-panel-title {
+  background-color: rgba(24, 38, 60, 1) !important;
+  color: #F94F46 !important;
+  font-weight: bolder !important;
+  text-transform: uppercase !important;
+}
+
+.adsk-viewing-viewer.dark-theme .docking-panel-container-solid-color-a,
+.adsk-viewing-viewer.dark-theme .docking-panel-container-solid-color-b,
+.adsk-viewing-viewer.dark-theme .docking-panel-footer,
+.adsk-viewing-viewer.dark-theme .adsk-control-group
+{
+  background-color: #18263C;
+}
