@@ -42,6 +42,7 @@ function getListCategories (elements, _callback){
 
 async function arraySimplify(obj, _callback){
   var arr = obj["quantities"]["Family"];
+  
   arr.sort();
   var object = obj, element =arr[0] ,count = 0 ; 
   var rsltel = [];
@@ -64,15 +65,6 @@ async function arraySimplify(obj, _callback){
   }
   rsltel.push(element);
   rsltcount.push(count);
-  rsltcount.sort((a, b) => {
-    if(a == b) {
-      return 0; 
-    }
-    if(a > b) {
-      return -1;
-    }
-    return 1;
-  });
 
   object["quantities"]["labels"] = rsltel;
   object["quantities"]['data'] = rsltcount;
