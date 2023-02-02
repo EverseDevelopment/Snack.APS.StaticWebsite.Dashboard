@@ -1,4 +1,4 @@
-function createBarChart(name, title, input) {
+    function createBarChart(name, title, input){
     var _this = this;
     var ctx = document.getElementById(name);
 
