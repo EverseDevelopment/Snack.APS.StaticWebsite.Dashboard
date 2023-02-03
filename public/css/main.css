@@ -66,17 +66,49 @@ body {
   width: 3rem;
 }
 
+.modal-dialog {
+  max-width: 60rem !important;
+}
+
 .modal-content {
   border-radius: 1rem;
+  background-color: #18263C;
+}
+
+.close-button {
+  font-size: 2rem;
+}
+
+.info-description {
+  margin: 3rem 0;
+}
+
+.info-description p {
+  font-size: 13px;
+  color: grey;
+}
+
+.modal-subtitle {
+  color: #F94F46;
+  font-weight: 700;
+}
+
+.modal-small-text {
+  font-size: small;
 }
 
 .modal-body {
-  padding: 2rem;
+  padding: 3rem 6rem 1rem;
 }
 
 .modal-title {
   color: #E62442;
   margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.yellow-text {
+  color: #F7DF4F;
 }
 
 .info-description h3 {
