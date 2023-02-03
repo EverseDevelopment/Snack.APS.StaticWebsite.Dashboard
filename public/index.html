@@ -87,31 +87,39 @@
       </div>
     </div>
     <!-- Start Modal -->
-    <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div
+      class="modal fade"
+      id="info-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered"  role="document">
         <div class="modal-content">
           <div class="modal-body">
-            <h1 class="modal-title">DATA MODEL</h1>
+            <section class="d-flex justify-content-between align-items-start">
+              <h1 class="modal-title yellow-text ">DATA MODEL</h1>
+              <button id="data-model" class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span class="text-white close-button" aria-hidden="true">&times;</span>
+              </button>
+            </section>
             <div class="info-description">
-              <h3>
-                DESCRIPTION
-              </h3>
+              <h3 class="modal-subtitle modal-small-text ">Description</h3>
               <p>
-                This is a 3D viewer connected directly with an Autodesk BIM360 model and implemented a Charts to obtain information of the models like categories, Material, Status, etc. By clicking the charts the user can be reflected by isolation and coloring the elements in the model.
+                This is a 3D viewer connected directly with an Autodesk BIM360 model and implemented a Charts
+                to obtain information of the models like categories, Material, Status, etc. By clicking the charts
+                the user can be reflected by isolation and coloring the elements in the model.
               </p>
             </div>
             <div class="info-description">
-              <h3>
-                TECHNOLOGY STACK
-              </h3>
+              <h3 class="modal-subtitle modal-small-text ">Technology Stack</h3>
               <p>React</p>
               <p>Three.js</p>
               <p>C#</p>
             </div>
             <div class="info-description">
-              <h3>
-                SERVICES
-              </h3>
+              <h3 class="modal-subtitle modal-small-text ">Services</h3>
               <p>Data Automation</p>
               <p>Process Automation</p>
             </div>
