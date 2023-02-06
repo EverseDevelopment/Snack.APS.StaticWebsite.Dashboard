@@ -107,30 +107,24 @@ function Quantities(input){
   createBarChart('position02', 'Unit Type', input.quantities);
 
   let labels = input.quantities.labels
-  var newDataSet = []
+  var data = []
 
   for (let index = 0; index < labels.length; index++) {
-    newDataSet[index] = [labels[index], 0, 0, 0, 0, 0]
+    let unitHour = getRndInteger(4, 17);
+    let unitCost = getRndInteger(10, 51);
+    data[index] = [
+      labels[index],
+      input.quantities.data[index],
+      input.quantities.data[index] * unitHour,
+      "£" + input.quantities.data[index] * unitCost,
+      unitHour,
+      "£" + unitCost
+    ]
   }
-
-  var dataSet = [
-     [ "Column", "38", "950", "£9,500", "25", "£250"],
-     [ "Donuts", "33", "825", "£21,450", "25", "£650"],
-     [ "Duct Wall", "132", "10296", "£462,000", "78", "£3,500"],
-     [ "External Panel", "206", "13184", "£607,700", "64", "£2,950"],
-     [ "External Parapet", "43", "2580", "£81,270", "60", "£1,890"],
-     [ "Floor", "724", "36200", "£1,086,000", "50", "£1,500"],
-     [ "Ground Beam", "93", "3720", "£93,000", "40", "£1,000"],
-     [ "Internal Panel", "519", "35811", "£1,281,930", "69", "£2,470"],
-     [ "L Unit", "12", "840", "£37,200", "70", "£3,100"],
-     [ "Stair Unit", "33", "2211", "£72,600", "67", "£2,200"],
-     [ " ", " ", " ", " ", " ", " "],
-     [ "Grand Total", "1833", "106617", "£3,752,650", "58.2", "£2,047"]
- ];
 
   $(document).ready(function() {
      $('#dataTable').DataTable( {
-         data: dataSet,
+         data,
          columns: [
              { title: "Row Labels" },
              { title: "Sum of Count" },
@@ -157,6 +151,10 @@ function Quantities(input){
 
   var table = document.getElementById("dataTable");
   table.classList.add("nowrap"); 
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
 }
 
 
