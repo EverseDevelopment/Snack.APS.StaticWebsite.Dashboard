@@ -27,6 +27,7 @@ function addElement () {
     const row02 = document.createElement("div");
     row02.classList.add("row");
     row02.classList.add("rowfill");
+    row02.setAttribute("id", "graphics");
     //Add column01
     const col01 = document.createElement("div");
     col01.classList.add("col");

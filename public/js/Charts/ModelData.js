@@ -23,19 +23,19 @@ function getListCategories (elements, _callback){
   "Revit Spot Elevations"
  ];
 
-   for(var i=0; i<elements.length; i++){
-       temString = String(elements[i].properties[0].displayValue);
-       if(temString != "" && !nonRenderingCategories.includes(temString))
-       {          
-          object["Elements"].push(elements[i].dbId)
-          object["quantities"]["Family"].push(temString);
+  for(var i=0; i<elements.length; i++){
+    temString = String(elements[i].properties[0].displayValue);
+    if(temString != "" && !nonRenderingCategories.includes(temString))
+    {          
+      object["Elements"].push(elements[i].dbId)
+      object["quantities"]["Family"].push(temString);
 
-          if(typeof object["quantities"]["elements"][temString] == 'undefined' ) 
-          {
-            object["quantities"]["elements"][temString] = []; 
-          }
-           object["quantities"]["elements"][temString].push(elements[i].dbId)
-        }            
+      if(typeof object["quantities"]["elements"][temString] == 'undefined' ) 
+      {
+        object["quantities"]["elements"][temString] = []; 
+      }
+        object["quantities"]["elements"][temString].push(elements[i].dbId)
+    }            
    }
    _callback(object);
 }
@@ -51,16 +51,16 @@ async function arraySimplify(obj, _callback){
   if(arr.length === 0) return; //exit for empty array
 
   for(var i = 0; i < arr.length; i++){
-      //count the occurences
-      if(element !== arr[i]){
-          rsltel.push(element);
-          rsltcount.push(count);
-          count =1;
-          element = arr[i];
-      }
-      else{
-          count++;
-      }
+    //count the occurences
+    if(element !== arr[i]){
+      rsltel.push(element);
+      rsltcount.push(count);
+      count =1;
+      element = arr[i];
+    }
+    else{
+      count++;
+    }
   }
   rsltel.push(element);
   rsltcount.push(count);
@@ -79,8 +79,6 @@ async function arraySimplify(obj, _callback){
   console.log("Quantities Data Loaded");
 
   _callback(object);
-
-  
 }
 
  function DesignData(elements) {
@@ -125,11 +123,10 @@ async function arraySimplify(obj, _callback){
       viewer.getProperties(item, function(dbs){          
         properties.forEach(property => {
           var p = dbs.properties.filter(prop => property.includes(prop.displayName))[0];
-          if (p !== undefined) {
-            console.log({design, p})
+          if (p != undefined) {
             for(var i=0; i<design.xReferenceVal.length; i++){
-              design.data[p.displayName][i]++;
-              design.elements[p.displayName][design.xReference[i]].push(item);
+              if(design.data[p.displayName]) design.data[p.displayName][i]++;
+              if(design.elements[p.displayName]) design.elements[p.displayName][design.xReference[i]].push(item);
               i=10;
             }
           }
@@ -226,35 +223,29 @@ function ManufactureData(elements) {
 
 }
 
-
-
-
-
-    const countUnique = arr  => {
-      return arr .reduce((acc, val, ind, array) => {
-         if(array.lastIndexOf(val) === ind){
-            return ++acc;
-         };
-         return acc;
-      }, 0);
-   };
-
-
+const countUnique = arr  => {
+  return arr .reduce((acc, val, ind, array) => {
+    if(array.lastIndexOf(val) === ind){
+      return ++acc;
+    };
+    return acc;
+  }, 0);
+};
 
 function DifferenceDays(input1, input2) {
-var StartPlanDate = ChangeFormatDate(input1);
-var EndPlanDate = ChangeFormatDate(input2);
-const date1 = new Date(StartPlanDate);
-const date2 = new Date(EndPlanDate);
-const diffTime = Math.abs(date2 - date1);
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  var StartPlanDate = ChangeFormatDate(input1);
+  var EndPlanDate = ChangeFormatDate(input2);
+  const date1 = new Date(StartPlanDate);
+  const date2 = new Date(EndPlanDate);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-return diffDays;
+  return diffDays;
 }
 
 
 function ChangeFormatDate(date) {
-var initial = date.split(/\//);
-return( [ initial[1], initial[0], initial[2] ].join('/'));
+  var initial = date.split(/\//);
+  return( [ initial[1], initial[0], initial[2] ].join('/'));
 }
 

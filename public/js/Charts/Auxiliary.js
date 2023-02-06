@@ -1,38 +1,36 @@
 //GraphsOnClick
 function GraphOnClick(objects, _this, item, datasetIndex = 0) {
-_this.viewer.clearThemingColors()
-                console.log(datasetIndex);
-                var dbItems = [];
-                if(item[0]._model.datasetLabel != null)
-                {
-                  dbItems = objects[item[datasetIndex]._model.datasetLabel][[item[0]._model.label]];
-                }
-                else
-                {
-                  dbItems = objects[item[0]._model.label];
-                }
-                var labelColour = item[datasetIndex]._model.backgroundColor;
-                labelColour = labelColour.replace(/[a-z]/gi, ''); 
-                labelColour = labelColour.replace(/[()]/g,'')
-                labelColour = labelColour.replace(/[ ]/g,'')
-                var res = labelColour.split(",");
-                const color = colorToVec4(res);
-                for (i = 0; i < dbItems.length; i++) {
-                    _this.viewer.setThemingColor(dbItems[i], color);
-                  } 
-                viewer.impl.invalidate(true);
-                _this.viewer.isolate(dbItems);
+  _this.viewer.clearThemingColors()
+  var dbItems = [];
+  if(item[0]._model.datasetLabel != null)
+  {
+    dbItems = objects[item[datasetIndex]._model.datasetLabel][[item[0]._model.label]];
+  }
+  else
+  {
+    dbItems = objects[item[0]._model.label];
+  }
+  var labelColour = item[datasetIndex]._model.backgroundColor;
+  labelColour = labelColour.replace(/[a-z]/gi, ''); 
+  labelColour = labelColour.replace(/[()]/g,'')
+  labelColour = labelColour.replace(/[ ]/g,'')
+  var res = labelColour.split(",");
+  const color = colorToVec4(res);
+  for (i = 0; i < dbItems.length; i++) {
+    _this.viewer.setThemingColor(dbItems[i], color);
+  } 
+  viewer.impl.invalidate(true);
+  _this.viewer.isolate(dbItems);
 }
 
 //Convert RGB number to THREE.vector
 function colorToVec4(color) {
   var res = new THREE.Vector4(remapRange(color[0]), remapRange(color[1]), remapRange(color[2]) + 0, color[3]);
-return res;
+  return res;
 }
 
 //Re range RGB numbers from 0 to 255
-function remapRange(number)
-{
+function remapRange(number) {
   var result = ((number - 0) * 1 / 255) + 0;
   return result;
 }
@@ -44,8 +42,8 @@ function getDataCount(object){
   const total = [];
 
   Object.keys(object).forEach(function(key) {
-      total.push (Object.keys(object[key]).length);     
-    });
+    total.push (Object.keys(object[key]).length);     
+  });
 
   return total;
 }
@@ -67,16 +65,16 @@ function switchButton(buttonName){
 
   var buttons = document.getElementById("containerButtons").childNodes;
   for (i = 0; i < buttons.length; i++) {
-      if(buttons[i].id != buttonName)
-      {
-          buttons[i].style.background='white';
-          buttons[i].style.color='#2d2d2d';
-      }
-      else
-      {
-          buttons[i].style.background='#2d2d2d';
-          buttons[i].style.color='white'
-      }
+    if(buttons[i].id != buttonName)
+    {
+      buttons[i].style.background='white';
+      buttons[i].style.color='#2d2d2d';
+    }
+    else
+    {
+      buttons[i].style.background='#2d2d2d';
+      buttons[i].style.color='white';
+    }
   } 
 
   var col01 = document.getElementById("col01");
@@ -104,11 +102,16 @@ function switchButton(buttonName){
   row01.appendChild(table);
 }
 
-
-
 function Quantities(input){
   createDoughnutChart('position01', 'Sum of Count', input.quantities);
   createBarChart('position02', 'Unit Type', input.quantities);
+
+  let labels = input.quantities.labels
+  var newDataSet = []
+
+  for (let index = 0; index < labels.length; index++) {
+    newDataSet[index] = [labels[index], 0, 0, 0, 0, 0]
+  }
 
   var dataSet = [
      [ "Column", "38", "950", "£9,500", "25", "£250"],
@@ -152,9 +155,8 @@ function Quantities(input){
      } );
  } );
 
-   var table = document.getElementById("dataTable");
-   table.classList.add("nowrap"); 
-
+  var table = document.getElementById("dataTable");
+  table.classList.add("nowrap"); 
 }
 
 
