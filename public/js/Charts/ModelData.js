@@ -20,7 +20,7 @@ function getListCategories (elements, _callback){
   "Revit Legend Components", "Revit Level", "Revit Lighting Fixture Tags", "Revit Lines", "Revit Mass","Revit Matchline","Revit Material Assets","Revit Materials",
   "Revit Mechanical Equipment Tags", "Revit Panel Schedule Templates - Branch Panel", "Revit Panel Schedule Templates - Data Panel", "Revit Panel Schedule Templates - Switchboard",
   "Revit Phases","Revit Sheet","Revit Views","Revit Rooms","Revit Analytical Walls","Revit Gutters","Revit Railing Rail Path Extension Lines","Revit Rectangular Straight Wall Opening",
-  "Revit Spot Elevations"
+  "Revit Spot Elevations", "Revit Balusters"
  ];
 
   for(var i=0; i<elements.length; i++){
