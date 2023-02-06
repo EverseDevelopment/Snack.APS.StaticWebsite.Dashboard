@@ -242,8 +242,6 @@ body {
 
 @media only screen and (max-width: 1600px) {
   .collfill {
-    height: 50%;
-    width: 100%;
     margin-top: 0%;
     padding-top: 5%;
   }
@@ -286,9 +284,27 @@ body {
   border-radius: 15px;
 }
 
+#graphics {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1200px) {
   .multi-button button {
     font-size: 1rem;
+  }
+
+  #graphics {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bottom-logo {
+    height: 4rem;
   }
 }
 
@@ -347,4 +363,10 @@ body {
 .adsk-viewing-viewer.dark-theme .adsk-control-group
 {
   background-color: #18263C;
+}
+
+#col01,
+#col02 {
+  height: 100%;
+  width: auto;
 }
