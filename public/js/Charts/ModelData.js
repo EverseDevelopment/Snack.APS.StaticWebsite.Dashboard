@@ -2,8 +2,6 @@ function getListCategories (elements, _callback){
   var cateElem = [];
   var object = {}
 
-  console.log(elements)
-
   object["Elements"] = []
   object["quantities"] = {};
   object["quantities"]["elements"] = {};
@@ -53,16 +51,16 @@ async function arraySimplify(obj, _callback){
   if(arr.length === 0) return; //exit for empty array
 
   for(var i = 0; i < arr.length; i++){
-      //count the occurences
-      if(element !== arr[i]){
-          rsltel.push(element);
-          rsltcount.push(count);
-          count =1;
-          element = arr[i];
-      }
-      else{
-          count++;
-      }
+    //count the occurences
+    if(element !== arr[i]){
+      rsltel.push(element);
+      rsltcount.push(count);
+      count =1;
+      element = arr[i];
+    }
+    else{
+      count++;
+    }
   }
   rsltel.push(element);
   rsltcount.push(count);
@@ -225,35 +223,29 @@ function ManufactureData(elements) {
 
 }
 
-
-
-
-
-    const countUnique = arr  => {
-      return arr .reduce((acc, val, ind, array) => {
-         if(array.lastIndexOf(val) === ind){
-            return ++acc;
-         };
-         return acc;
-      }, 0);
-   };
-
-
+const countUnique = arr  => {
+  return arr .reduce((acc, val, ind, array) => {
+    if(array.lastIndexOf(val) === ind){
+      return ++acc;
+    };
+    return acc;
+  }, 0);
+};
 
 function DifferenceDays(input1, input2) {
-var StartPlanDate = ChangeFormatDate(input1);
-var EndPlanDate = ChangeFormatDate(input2);
-const date1 = new Date(StartPlanDate);
-const date2 = new Date(EndPlanDate);
-const diffTime = Math.abs(date2 - date1);
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  var StartPlanDate = ChangeFormatDate(input1);
+  var EndPlanDate = ChangeFormatDate(input2);
+  const date1 = new Date(StartPlanDate);
+  const date2 = new Date(EndPlanDate);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-return diffDays;
+  return diffDays;
 }
 
 
 function ChangeFormatDate(date) {
-var initial = date.split(/\//);
-return( [ initial[1], initial[0], initial[2] ].join('/'));
+  var initial = date.split(/\//);
+  return( [ initial[1], initial[0], initial[2] ].join('/'));
 }
 
