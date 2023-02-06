@@ -114,9 +114,9 @@ function Quantities(input){
     let unitCost = getRndInteger(10, 51);
     data[index] = [
       labels[index],
-      input.quantities.data[index],
-      input.quantities.data[index] * unitHour,
-      "£" + input.quantities.data[index] * unitCost,
+      formatNumber(input.quantities.data[index]),
+      formatNumber(input.quantities.data[index] * unitHour),
+      "£" + formatNumber(input.quantities.data[index] * unitCost),
       unitHour,
       "£" + unitCost
     ]
@@ -155,6 +155,10 @@ function Quantities(input){
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+function formatNumber(number) {
+  return new Intl.NumberFormat('de-DE').format(number)
 }
 
 
