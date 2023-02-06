@@ -65,6 +65,8 @@ function launchViewer(urn) {
   function onGeometryLoaded() {
     console.log("Geometry Loaded");
 
+    console.log(viewer)
+
     viewer.search(
       "",
       function (dbIds) {

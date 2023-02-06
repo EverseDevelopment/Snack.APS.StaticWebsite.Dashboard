@@ -2,6 +2,8 @@ function getListCategories (elements, _callback){
   var cateElem = [];
   var object = {}
 
+  console.log(elements)
+
   object["Elements"] = []
   object["quantities"] = {};
   object["quantities"]["elements"] = {};
@@ -23,19 +25,19 @@ function getListCategories (elements, _callback){
   "Revit Spot Elevations"
  ];
 
-   for(var i=0; i<elements.length; i++){
-       temString = String(elements[i].properties[0].displayValue);
-       if(temString != "" && !nonRenderingCategories.includes(temString))
-       {          
-          object["Elements"].push(elements[i].dbId)
-          object["quantities"]["Family"].push(temString);
+  for(var i=0; i<elements.length; i++){
+    temString = String(elements[i].properties[0].displayValue);
+    if(temString != "" && !nonRenderingCategories.includes(temString))
+    {          
+      object["Elements"].push(elements[i].dbId)
+      object["quantities"]["Family"].push(temString);
 
-          if(typeof object["quantities"]["elements"][temString] == 'undefined' ) 
-          {
-            object["quantities"]["elements"][temString] = []; 
-          }
-           object["quantities"]["elements"][temString].push(elements[i].dbId)
-        }            
+      if(typeof object["quantities"]["elements"][temString] == 'undefined' ) 
+      {
+        object["quantities"]["elements"][temString] = []; 
+      }
+        object["quantities"]["elements"][temString].push(elements[i].dbId)
+    }            
    }
    _callback(object);
 }
@@ -79,8 +81,6 @@ async function arraySimplify(obj, _callback){
   console.log("Quantities Data Loaded");
 
   _callback(object);
-
-  
 }
 
  function DesignData(elements) {
@@ -125,10 +125,10 @@ async function arraySimplify(obj, _callback){
       viewer.getProperties(item, function(dbs){          
         properties.forEach(property => {
           var p = dbs.properties.filter(prop => property.includes(prop.displayName))[0];
-          if (p !== undefined) {
+          if (p != undefined) {
             for(var i=0; i<design.xReferenceVal.length; i++){
-              design.data[p.displayName][i]++;
-              design.elements[p.displayName][design.xReference[i]].push(item);
+              if(design.data[p.displayName]) design.data[p.displayName][i]++;
+              if(design.elements[p.displayName]) design.elements[p.displayName][design.xReference[i]].push(item);
               i=10;
             }
           }

@@ -110,6 +110,18 @@ function Quantities(input){
   createDoughnutChart('position01', 'Sum of Count', input.quantities);
   createBarChart('position02', 'Unit Type', input.quantities);
 
+  console.log({input})
+  let labels = input.quantities.labels
+  var newDataSet = []
+
+  for (let index = 0; index < labels.length; index++) {
+    // const element = array[index];
+    // newDataSet.fill("", 1, 5)
+    newDataSet[index] = [labels[index], 0, 0, 0, 0, 0]
+  }
+  
+  console.log(newDataSet)
+
   var dataSet = [
      [ "Column", "38", "950", "£9,500", "25", "£250"],
      [ "Donuts", "33", "825", "£21,450", "25", "£650"],
@@ -127,7 +139,7 @@ function Quantities(input){
 
   $(document).ready(function() {
      $('#dataTable').DataTable( {
-         data: dataSet,
+         data: newDataSet,
          columns: [
              { title: "Row Labels" },
              { title: "Sum of Count" },
