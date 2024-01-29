@@ -1,6 +1,6 @@
 # APS Dashboard
 
-[<img src="https://user-images.githubusercontent.com/67430601/216076785-75f815b8-0288-4e95-9c57-0cbadafb5aaf.png">](https://github.com/EverseDevelopment/Snack.APS.StaticWebsite.Dashboard/wiki)
+[<img src="https://s3.amazonaws.com/everse.assets/GithubReadme/SnackAPSDashboard.png">](https://github.com/EverseDevelopment/Snack.APS.StaticWebsite.Dashboard/wiki)
 <br/>
 
 # Demo
@@ -28,6 +28,6 @@ We are an international mix of AEC professionals, product designers, and softwar
 
 <p align="center" width="100%">
     <a href="https://www.e-verse.com/">
-    <img src="https://s3.amazonaws.com/everse.assets/e-verse_logo_no+slogan.jpg" width="732" height="271" align="center">
+    <img src="https://s3.amazonaws.com/everse.assets/GithubReadme/e-verse_logo_no+slogan.jpg" align="center">
     </a>
 </p>
